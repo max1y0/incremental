@@ -1,1 +1,3 @@
-leccion 7 y 8 de almostidle
+tutorial saving de almostidle
+cambiar para que cada vez que compre una gondola se guarde en el arreglo de gondolas en vez de siempre actualizar el primer elemento del arreglo
+mostrar los elementos del arreglo abajo

@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+.header .coins {
+	width: 10%;
+	float: left;
+	padding: 15px;
+	padding-left: 4%;
+
+	color: #FAFAFA; 
+	background: #BDBDBD;
+	border-radius: 2px;
+}
+
+.header .title{
+	width: 86%;
+	float: left;
+	padding: 15px;
+	padding-left: 35%;
+	color:212121;
+}
+
+.header .gondolas {
+	width: 4%;
+	float: left;
+	padding: 15px;
+	padding-left: 1.5%;
+	color: #FAFAFA; 
+	background: #BDBDBD;
+	border-radius: 100%;
+}
+
+.separator{
+	width: 100%;
+	float: left;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	height: 2px;
+	background: #212121;
+	border-radius: 100%;
+}
+
+.main{
+	clear: all;/*
+	width: 100%;
+	float: left;*/
+	/*padding: 15px*/
+}
+.main .gondolas{
+	width: 20%;
+	float:left;
+	padding: 5%;
+	background: #f44336;
+	color: #FAFAFA;
+	border: none;
+}
+.buttonInc{
+	width: 5%;
+    float: right;
+    height: 200px;
+    background: #80CBC4;
+    border:none;
+}
+
+.footer{
+	width: 100%;
+	float: left;
+	background: #009688;
+}
+
+.buttonAdd{
+	width: 100%;
+	background: none;
+	border: none;
+	color: #FAFAFA;
+	font-family: "Lucida Sans", sans-serif;
+	font-size: 20px;
+	padding-bottom: 15px;
+	padding-top:15px;
+}

@@ -2,18 +2,32 @@
 <meta charset="UTF-8"> 
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="interface.css" />
 		
 	</head>
 	
 	<body>
-		<span id=coinCounter></span>
-		<button type="button" onClick="coinClick(1)">Inc</button>
-		
-		Gondolas: <span id="gondola">0</span><br/>
-		Costo: <span id="gondolaCost">10</span><br/>
-		<button type="button" onClick="buyGondola()">Comprar Gondola</button>
-		
+		<div class="header">
+			<div class="coins">
+				<span id=coinCounter></span>
+			</div>
+			<div class="title"> Supermercado </div>
+			<div class="gondolas"
+				Gondolas: <span id="gondola">0</span><br/>
+			</div>
+		</div>
+		<div class= "separator"></div>
+		<div class="main">
+			<button class= "buttonInc" type="button" onClick="manualCoinClick()">Inc</button>
+		</div>	
+		<div class= "separator"></div>
+		<div class= "footer"
+			<div class= "gondolas">
+				Costo: <span id="gondolaCost">10</span><br/>
+				<button class="buttonAdd"type="button" onClick="buy(0)">Comprar Gondola</button>
+			</div>
+		</div>
 		<script type="text/javascript" src="main.js"></script>
 	</body>
 	
