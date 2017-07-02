@@ -1,0 +1,1 @@
+Playing with html, css, javascript to make a IDLE game, mainly based on http://almostidle.com/tutorials/all tutorial
