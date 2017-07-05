@@ -21,7 +21,7 @@ function GameSave() {
 
 //Loads the first gondola
 function InitGondolas() {
-    LoadGondolas("Gondola "+gondolas.length,10,1);
+    LoadGondolas("Mercaderia ",10,1);
 }
 
 //loads the gondola data in the array
@@ -29,8 +29,8 @@ function LoadGondolas(name,cost,persec) {
     var cur = gondolas.length;
     gondolas[cur] = new Gondola();
     gondolas[cur].name = name;
-    gondolas[cur].persec = persec;
     gondolas[cur].cost = cost;
+    gondolas[cur].persec = persec;
 }
 
 //click for the button
@@ -53,16 +53,15 @@ function buy(id){
         game.money -= gondolas[id].cost;                                       //removes the coins spent
         document.getElementById('gondola').innerHTML = game.gondolas[id];    //updates the number of gondolas for the user
         document.getElementById('coinCounter').innerHTML = game.money;   //updates the number of coins for the user
+        show(id);
     };
     gondolas[id].cost = Math.floor(10 * Math.pow(1.1,game.gondolas[id]));         //works out the cost of the next gondola
     document.getElementById('gondolaCost').innerHTML = gondolas[id].cost;    //updates the Gondola cost for the user
-    show();
+    
 };
 
-function show () {
-    for (var i = 0; i < gondolas.length; i++) {
-        // console.log(game.gondolas[i]);
-    };
+function show (i) {
+    document.getElementById('Piso').insertAdjacentHTML('afterend',gondolas[i].name + game.gondolas[i]);
 }
 
 
