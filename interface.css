@@ -3,6 +3,7 @@
 }
 html {
     font-family: "Lucida Sans", sans-serif;
+    background: #EFF0D1 
 }
 
 .header .coins {
@@ -62,14 +63,14 @@ html {
 	width: 5%;
     float: right;
     height: 200px;
-    background: #80CBC4;
+    background: #77BA99;
     border:none;
 }
 
 .footer{
 	width: 100%;
 	float: left;
-	background: #009688;
+	background: #8ACB88;
 }
 
 .buttonAdd{
