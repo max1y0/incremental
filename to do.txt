@@ -1,8 +1,5 @@
 tutorial saving de almostidle
 
-Cada posicion del arreglo game, significa un tipo de edificio, en este caso gondolas. Yo deberia pushear en mi arreglo cada vez que quiera hacer una nueva gondola de tipo diferente, y guardarla en otro lugar del arreglo gondolas, asi el game.gondolas tiene las cantidades correctas.
-porejemolo, las gondolas basicas pueden ser los estantes, despues agregar, verduleria, carniceria, ropa, bazar, etc.
-
-antes de comparar nada, en el caso del juego final, deberia preguntar que comprar para saber cual es el costo de cada cosa. el que comprar deberia significar que id corresponde, quiza otro arreglo que me devuelva los id segun que quiere, o fijarse si hay una funcion busqueda en los arreglos javascript, para buscar bazar, y que me devuelva el indice donde el .name es bazar
-
 el init gondola quiza deberia llenar en cada campo del arreglo gondolas, todas las categorias posibles con sus respectivos precios.
+
+Cambiar los botones de compra para que haya uno por id, si se puede hacer que se prendan cuando se deberian prender mejor

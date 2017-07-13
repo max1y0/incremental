@@ -4,14 +4,14 @@ var gondolas = [];
 const CANTGONDOLAS = 2
 
 
-//Buildings objects
-function Gondola() {
+//Gondola object constructor
+function Gondola() {     
     this.name = "Gondola";
     this.cost = 10;
     this.persec = 1;
 }
 
-//Game object
+//Game object constructor
 function GameSave() {
     this.money = 0;
     this.gondolas = [];                             //qty of gondolas in this game? Creo que cuenta la cantidad de gondolas en un campo del arreglo gondolas
@@ -20,10 +20,10 @@ function GameSave() {
     }
 }
 
-//Loads the first gondola
+//Loads the firsts gondola
 function InitGondolas() {
-    LoadGondolas("Mercaderia ",10,1);
-    LoadGondolas("Bazar",100,10);
+    LoadGondolas("Mercaderia ",10,0.1); //id 0 
+    LoadGondolas("Bazar",100,1);       //id 1
 
 }
 
@@ -39,7 +39,7 @@ function LoadGondolas(name,cost,persec) {
 //click for the button
 function manualCoinClick (n){
     game.money ++;
-    document.getElementById("coinCounter").innerHTML = game.money;
+    document.getElementById("coinCounter").innerHTML = Math.floor(game.money);
 }
 
 //automated click when have gondolas
@@ -47,21 +47,22 @@ function coinClick (){
     for (var i = 0;i < gondolas.length;i++) {
         game.money += game.gondolas[i] * gondolas[i].persec;
     }
-    document.getElementById("coinCounter").innerHTML = game.money;
+    renderCoins()
 }
 
+//builds a type of gondola based on the id
 function build(id){
     if(game.money >= gondolas[id].cost){                                       //checks that the player can afford the gondola
         game.gondolas[id]++;                                                 //increases number of gondolas
         game.money -= gondolas[id].cost;                                       //removes the coins spent
-        document.getElementById('gondola').innerHTML = game.gondolas[id];    //updates the number of gondolas for the user
-        document.getElementById('coinCounter').innerHTML = game.money;   //updates the number of coins for the user
-        show(id);
+        document.getElementById('gondola').innerHTML = game.gondolas[id];             //updates the number of gondolas for the user
+        renderCoins()                                                                   //updates the number of coins for the user
+        gondolas[id].cost = Math.floor(gondolas[id].cost * Math.pow(1.1,game.gondolas[id]));         //works out the cost of the next gondola
+        renderGondola(id);
     };
-    gondolas[id].cost = Math.floor(10 * Math.pow(1.1,game.gondolas[id]));         //works out the cost of the next gondola
-    document.getElementById('gondolaCost').innerHTML = gondolas[id].cost;    //updates the Gondola cost for the user
 };
 
+//buys a gondola, asks what to build and builds on that ID
 function buy(){
     //Creating menu
     var menu = "What do you want to build?";
@@ -72,12 +73,17 @@ function buy(){
     //Checking input
     if (idBuilding != null && idBuilding >0 && idBuilding <= CANTGONDOLAS) {
         console.log(idBuilding)
+        build(idBuilding-1)
         
     }
 }
 
-function show (i) {
+function renderGondola (i) {
     document.getElementById('Piso').insertAdjacentHTML('afterend',gondolas[i].name + game.gondolas[i]);
+}
+
+function renderCoins() {
+    document.getElementById("coinCounter").innerHTML = Math.floor(game.money)
 }
 
 
@@ -90,4 +96,5 @@ window.setInterval(function(){
 window.onload = function() {
     InitGondolas();
     window.game = new GameSave();
+    renderCoins()
 };
