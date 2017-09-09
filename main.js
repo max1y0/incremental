@@ -78,8 +78,10 @@ function buy(){
     }
 }
 
+
+//Creating info on screen
 function renderGondola (i) {
-    document.getElementById('Piso').insertAdjacentHTML('afterend',gondolas[i].name + game.gondolas[i]);
+    document.getElementById('Piso').insertAdjacentHTML('afterend','<div class ="gondola">' + gondolas[i].name + game.gondolas[i]) + '</div>';
 }
 
 function renderCoins() {
@@ -87,14 +89,27 @@ function renderCoins() {
 }
 
 
+//cheats functions
+function addCoins(n) {
+    game.money += n;
+}
+
+
+
+
+
+
+
+
 //Game Loop
 window.setInterval(function(){
     coinClick();
 }, 1000);
 
-
+//Game load
 window.onload = function() {
     InitGondolas();
     window.game = new GameSave();
     renderCoins()
 };
+
