@@ -5,3 +5,5 @@ el init gondola quiza deberia llenar en cada campo del arreglo gondolas, todas l
 Cambiar los botones de compra para que haya uno por id, si se puede hacer que se prendan cuando se deberian prender mejor
 
 Cambiar los colores de las gondolas segun que sea (en vez de class=gondola que en el javascript se pregunte que se crea)
+
+Arreglar el tamaño de los docuadras, cambia segun el texto de la gondola
