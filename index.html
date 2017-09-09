@@ -8,18 +8,20 @@
 	</head>
 	
 	<body>
+		<!-- Header del juego, con el contador de monedas, el título y la cantidad de góndolas -->
 		<div class="header">
 			<div class="coins">
-				<span id=coinCounter></span>
+				<span id="coinCounter"></span>
 			</div>
 			<div class="title"> Supermercado </div>
-			<div class="gondolas"
+			<div class="cantGondolas"
 				Gondolas: <span id="gondola">0</span><br/>
 			</div>
 		</div>
 
 		<div class= "separator"></div>
 		
+		<!-- Espacio principal del juego, con el boton de incrementar y el espacio de gondolas -->
 		<div class="main">
 			<div id="Piso"></div>
 			<button class= "buttonInc" type="button" onClick="manualCoinClick()">Inc</button>
@@ -27,8 +29,9 @@
 		
 		<div class= "separator"></div>
 		
-		<div class= "footer"
-			<div class= "gondolas">
+		<!-- Espacio inferior,con el boton de compra -->
+		<div class= "footer">
+			<div class= "buyGondolas">
 				<!-- Costo: <span id="gondolaCost">10</span><br/> -->
 				<button class="buttonAdd"type="button" onClick="buy()">Comprar Gondola</button>
 			</div>

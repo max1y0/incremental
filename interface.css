@@ -25,7 +25,7 @@ html {
 	color:212121;
 }
 
-.header .gondolas {
+.header .cantGondolas {
 	width: 4%;
 	float: left;
 	padding: 15px;
@@ -51,13 +51,17 @@ html {
 	float: left;*/
 	/*padding: 15px*/
 }
-.main .gondolas{
-	width: 20%;
+.main .gondola{
+	width: 15%;
 	float:left;
-	padding: 5%;
+	padding-left: 4%;
+	padding-top:5%;
+	padding-bottom: 5%;
+	padding-right: 5%;
 	background: #f44336;
 	color: #FAFAFA;
-	border: none;
+	margin: 2px;
+	border-radius: 2px;
 }
 .buttonInc{
 	width: 5%;
