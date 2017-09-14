@@ -51,14 +51,27 @@ html {
 	float: left;*/
 	/*padding: 15px*/
 }
-.main .gondola{
+.main .mercaderia{
 	width: 15%;
 	float:left;
 	padding-left: 4%;
 	padding-top:5%;
 	padding-bottom: 5%;
 	padding-right: 5%;
-	background: #f44336;
+	background: #f13030;
+	color: #FAFAFA;
+	margin: 2px;
+	border-radius: 2px;
+}
+
+.main .bazar{
+	width: 15%;
+	float:left;
+	padding-left: 4%;
+	padding-top:5%;
+	padding-bottom: 5%;
+	padding-right: 5%;
+	background: #cc2936;
 	color: #FAFAFA;
 	margin: 2px;
 	border-radius: 2px;

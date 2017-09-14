@@ -53,11 +53,11 @@ function coinClick (){
 //builds a type of gondola based on the id
 function build(id){
     if(game.money >= gondolas[id].cost){                                       //checks that the player can afford the gondola
-        game.gondolas[id]++;                                                 //increases number of gondolas
+        game.gondolas[id]++;                                                 //increases number of gondolas of that id
         game.money -= gondolas[id].cost;                                       //removes the coins spent
         document.getElementById('gondola').innerHTML = game.gondolas[id];             //updates the number of gondolas for the user
-        renderCoins()                                                                   //updates the number of coins for the user
         gondolas[id].cost = Math.floor(gondolas[id].cost * Math.pow(1.1,game.gondolas[id]));         //works out the cost of the next gondola
+        renderCoins()                                                                   //updates the number of coins for the user
         renderGondola(id);
     };
 };
@@ -81,7 +81,14 @@ function buy(){
 
 //Creating info on screen
 function renderGondola (i) {
-    document.getElementById('Piso').insertAdjacentHTML('afterend','<div class ="gondola">' + gondolas[i].name + game.gondolas[i]) + '</div>';
+    var append ='';
+    if (i==0){
+        append = '<div class ="mercaderia">' + gondolas[i].name + game.gondolas[i] + '</div>'
+    }
+    if (i==1){
+        append = '<div class ="bazar">' + gondolas[i].name + game.gondolas[i] + '</div>';
+    }
+    document.getElementById('Piso').insertAdjacentHTML('afterend',append);
 }
 
 function renderCoins() {
@@ -101,7 +108,7 @@ function addCoins(n) {
 
 
 
-//Game Loop
+//Game Loop 
 window.setInterval(function(){
     coinClick();
 }, 1000);
